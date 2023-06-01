@@ -67,7 +67,7 @@ header .contacto a {
 /*---------------main----------------*/
 main .banner {
   height: 100%;
-  min-height: 95vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   background-image: url(file/Agustin\ haag\ \(1\).png);
@@ -144,6 +144,7 @@ main .info .perfil {
   align-items: center;
   justify-content: center;
   min-height: 200px;
+  max-height: 400px;
   min-width: 250px;
 }
 main .info .perfil img {
@@ -409,7 +410,7 @@ main .proyects .contenedor-indicadores .indicadores button{
     margin-right: 2px;
 }
 main .proyects .contenedor-indicadores .indicadores button:hover, main .proyects .contenedor-indicadores .indicadores button.activo{
-    background: red;
+    background: var(--color-esp);
 }
 main .proyects .contenedor-principal{
         display: flex;
@@ -578,9 +579,9 @@ main .form form .container-input {
 }
 main .form form .container-input .container-small{
   width: 50%;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
-main .form form .container-input .container-small input {
+main .form form .container-input .container-small input, main .form form > .container-check input {
   width: 100%;
   padding: 15px 10px;
   outline: none;
@@ -600,14 +601,7 @@ main .form form .container-input .container-small:nth-child(1) {
 }
 main .form form .container-check{
   width: 100%;
-  margin-bottom: 5px
-}
-main .form form > .container-check input {
-  padding: 15px 10px;
-  outline: none;
-  width: 100%;
-  border: 1px solid rgb(170, 170, 170);
-  border-radius: 15px;
+  margin-bottom: 10px
 }
 main .form form .container-check textarea {
   outline: none;

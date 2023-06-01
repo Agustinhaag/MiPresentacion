@@ -170,71 +170,7 @@
         <div class="contenedor-principal">
           <button id="flecha-izquierda" class="flecha-izquierda"><i class="fa-solid fa-chevron-left"></i></button>
           <div class="contenedor-carrusel">
-            <div class="container-proyect">
-              <div class="proyecto left">
-                <img src="file/netflix.jpeg" alt="" />
-                <div class="info-proyecto">
-                  <h4>Web tipo Netflix</h4>
-                  <p>Elaborada con Html, Css y Javascript, 100% responsive</p>
-                </div>
-              </div>
-              <div class="proyecto">
-                <img src="file/clima.jpg" alt="" />
-                <div class="info-proyecto">
-                  <h4>Web del servicio meteorológico</h4>
-                  <p>
-                    Diseñada con Html, Css, Javascript y uso de la api de
-                    Openweather
-                  </p>
-                </div>
-              </div>
-              <div class="proyecto">
-                <img src="file/corporation.jpeg" alt="" />
-                <div class="info-proyecto">
-                  <h4>Web tipo E-commerce</h4>
-                  <p>
-                    Diseño web responsive y adaptable a cualquier dispositivo
-                  </p>
-                </div>
-              </div>
-              <div class="proyecto">
-                <img src="file/calc.jpg" alt="" />
-                <div class="info-proyecto">
-                  <h4>App calculadora</h4>
-                  <p>100% funcional y responsive</p>
-                </div>
-              </div>
-              <div class="proyecto">
-                <img src="file/funkpop.jpg" alt="" />
-                <div class="info-proyecto">
-                  <h4>Web E-commerce de venta de Funko-pop</h4>
-                  <p>Proyecto del programa codo a codo 4.0</p>
-                </div>
-              </div>
-              <div class="proyecto">
-                <img src="file/cronometro.jpg" alt="" />
-                <div class="info-proyecto">
-                  <h4>App cronómetro</h4>
-                  <p>Elaborado con Css, Html y Javascript, 100% responsive</p>
-                </div>
-              </div>
-              <div class="proyecto">
-                <img src="file/3.jpeg" alt="" />
-                <div class="info-proyecto">
-                  <h4>Encriptador de texto</h4>
-                  <p>Proyecto del programa Aura Latam ONE</p>
-                </div>
-              </div>
-              <div class="proyecto">
-                <img src="file/tareas.jpg" alt="" />
-                <div class="info-proyecto">
-                  <h4>Web de tareas</h4>
-                  <p>
-                    Proyecto diseñado con Javascript, Html y Css, responsive y
-                    adaptable
-                  </p>
-                </div>
-              </div>
+            <div id="container-proyect" class="container-proyect">
             </div>
           </div>
           <button id="flecha-derecha" class="flecha-derecha"><i class="fa-solid fa-chevron-right"></i></button>
@@ -244,19 +180,19 @@
         <h2>Contacta conmigo</h2>
         <form id="form"action="">
           <div class="container-input">
-           <div class="container-small"> <input type="text" id="name" placeholder="Nombre completo *"/><small>Debe ingresar el nombre completo</small></div><div class="container-small"><input
+           <div class="container-small"> <input type="text" id="name" placeholder="Nombre completo *"/><small></small></div><div class="container-small"><input
               type="email" id="email"
               placeholder="Dirección de Email"
-            /><small>Debe ingresar un email</small></div>
+            /><small></small></div>
           </div>
-          <div class="container-check"><input type="text" id="asunto" placeholder="Asunto"/><small>Ingrese un asunto válido</small></div>
+          <div class="container-check"><input type="text" id="asunto" placeholder="Asunto"/><small></small></div>
           <div class="container-check"><textarea
             name=""
             placeholder="Mensaje"
             id="mensaje"
             cols="30"
             rows="10"
-          ></textarea><small>Ingrese un mensaje</small></div>
+          ></textarea><small></small></div>
           <div class="container-btn-form"><button type="submit">Enviar</button></div>
         </form>
       </section>
@@ -280,6 +216,7 @@
       src="https://kit.fontawesome.com/6fe6321916.js"
       crossorigin="anonymous"
     ></script>
-    <script src="index.js"></script>
+    <script src="proyects.js" type="module"></script>
+    <script src="index.js" type="module"></script>
   </body>
 </html>
