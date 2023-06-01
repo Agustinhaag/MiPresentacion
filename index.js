@@ -15,6 +15,22 @@ enlaces.forEach((enlace) => {
     menu.classList.toggle("visible");
   });
 });
+import { proyectos } from "./proyects.js";
+proyectos.forEach((proyecto, index) => {
+  let contenedor = document.createElement("div");
+  contenedor.setAttribute("class", "proyecto");
+  if (index === 0) {
+    contenedor.classList.add("left"); 
+  }
+  contenedor.innerHTML = `
+                <img src="${proyecto.img}" alt="" />
+                <div class="info-proyecto">
+                    <h4>${proyecto.title}</h4>
+                    <p>${proyecto.description}</p>
+                </div>`;
+  let contain = document.getElementById("container-proyect");
+  contain.appendChild(contenedor);
+});
 
 let fila = document.querySelector(".contenedor-carrusel");
 let proyecto = document.querySelectorAll(".proyecto");
@@ -42,7 +58,6 @@ izquierda.addEventListener("click", () => {
 const numpag = Math.ceil(proyecto.length / 5);
 for (let i = 0; i < numpag; i++) {
   const indicador = document.createElement("button");
-
   if (i === 0) {
     indicador.classList.add("activo");
   }
@@ -134,16 +149,4 @@ function sucess(input) {
   padre.classList.remove("mostrar");
 }
 
-import { proyectos } from "./proyects.js";
-proyectos.forEach((proyecto) => {
-  let contenedor = document.createElement("div");
-  contenedor.setAttribute("class", "proyecto");
-  contenedor.innerHTML = `
-                <img src="${proyecto.img}" alt="" />
-                <div class="info-proyecto">
-                    <h4>${proyecto.title}</h4>
-                    <p>${proyecto.description}</p>
-                </div>`;
-  let contain = document.getElementById("container-proyect");
-  contain.appendChild(contenedor);
-});
+
