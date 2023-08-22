@@ -63,7 +63,7 @@ header .contacto a {
 .fa-envelope {
   color: rgb(25, 146, 245);
 }
-main{
+.main{
   min-height: 80vh;
   padding-top: 100px;
 }
