@@ -1,76 +1,9 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-.dimensiones{
-  max-width: 1400px;
-  margin: 0 auto;
-}
-:root {
-  --fondo-header: rgba(0, 0, 0, 0.911);
-  --color-esp: rgb(240, 114, 233);
-  --fondo-section: rgba(199, 199, 199, 0.26);
-}
-header {
-  display: flex;
-  justify-content: space-between;
-  height: 12vh;
-  align-items: center;
-  padding: 0 10px;
-  position: fixed;
-  z-index: 200;
-  width: 100%;
-  background: var(--fondo-header);
-}
-.close,.hamb {
-  cursor: pointer;
-  display: none;
-  transition: 0.4s;
-}
-header .container-head {
-  font-size: 30px;
-  color: var(--color-esp);
-  font-style: italic;
-}
-header nav {
-  min-width: 25%;
-  text-align: center;
-  display: flex;
-  justify-content: space-between;
-}
-header nav a {
-  color: white;
-  padding-left: 27px;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-header nav a:hover {
-  color: var(--color-esp);
-  font-size: 17px;
-  transition: 1s;
-}
-header .contacto a {
-  text-decoration: none;
-  margin: 0 10px;
-  font-size: 22px;
-}
-.fa-instagram {
-  color: rgb(187, 15, 38);
-}
-.fa-linkedin {
-  color: rgb(26, 26, 252);
-}
-.fa-envelope {
-  color: rgb(25, 146, 245);
-}
 /*---------------main----------------*/
 main .banner {
   height: 100%;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-image: url(file/Agustin\ haag\ \(1\).png);
+  background-image: url(../file/Agustin\ haag\ \(1\).png);
   background-size: cover;
   background-position: center;
   color: white;
@@ -282,7 +215,7 @@ main .habilidades {
   flex-direction: column;
   align-items: center;
   background: linear-gradient(rgba(165, 47, 159, 0.664), rgba(24, 12, 12, 0.8)),
-    url(file/fondohab.jpg);
+    url(../file/fondohab.jpg);
   background-size: cover;
   background-position: center center;
   padding: 80px 0 40px 0;
@@ -591,14 +524,6 @@ main .form form .container-input .container-small input, main .form form > .cont
 main .form form .container-input .container-small:nth-child(1) {
   margin-right: 18px;
 }
- small{
-  color: red;
-  margin-left: 5px;
-  visibility: hidden;
-}
-.mostrar small{
-  visibility: visible;
-}
 main .form form .container-check{
   width: 100%;
   margin-bottom: 10px
@@ -630,83 +555,37 @@ main .form form .container-btn-form button:hover {
   background: var(--color-esp);
   color: white;
 }
-/*-------------footer-------------*/
-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  height: 100%;
-  background: rgb(51, 51, 51);
+ .textarea-error-msg{
+    color: #dc3545; 
+  font-size: .875em; 
+  margin-top: 4px;
 }
-footer p {
-  margin: 15px 0;
-  font-size: 20px;
+.container-sucess{
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 40vh;
+    height: 100%;
+    justify-content: center;
 }
-footer .container-footer {
-  display: flex;
-  width: auto;
-  margin: 10px 0;
-  justify-content: space-between;
+.container-sucess h2{
+    margin-bottom: 25px;
 }
-footer .container-footer a {
-  font-size: 28px;
-  margin: 0 10px;
+.container-sucess .container-description{
+    width: 37%;
+    margin-top: 30px;
+    font-weight: 600;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
 }
-/*-----------media---------*/
+.container-description p{
+    border-bottom: 1px solid #FF3333;
+}
+
 @media (max-width: 768px) {
-  .hamb,
-  .close {
-    display: block;
-    color: white;
-    cursor: pointer;
-    font-size: 17px;
-  }
-  .close {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-  }
-  nav a > span {
-    width: 6px;
-    height: 6px;
-    margin-left: 8px;
-    border-radius: 10px;
-    background: white;
-    display: inline-block;
-  }
-  .hamb {
-    position: relative;
-    right: 10px;
-  }
-  .contacto {
-    display: none;
-  }
-  header nav {
-    position: fixed;
-    display: block;
-    width: auto;
-    height: 100vh;
-    background: rgb(0, 0, 0);
-    top: 0;
-    right: 0;
-    text-align: right;
-    z-index: 300;
-    padding: 60px 20px 0 0;
-    transform: translateX(100%);
-    visibility: hidden;
-  }
-  nav.visible {
-    transform: translateX(0);
-    visibility: visible;
-    transition: 0.6s;
-  }
-  header nav a {
-    padding: 30px 0;
-    display: block;
-    text-transform: capitalize;
-  }
   main .info {
     flex-direction: column;
     align-items: center;

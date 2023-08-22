@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.dimensiones{
+  max-width: 1400px;
+  margin: 0 auto;
+}
+:root {
+  --fondo-header: rgba(0, 0, 0, 0.911);
+  --color-esp: rgb(240, 114, 233);
+  --fondo-section: rgba(199, 199, 199, 0.26);
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 12vh;
+  align-items: center;
+  padding: 0 10px;
+  position: fixed;
+  z-index: 200;
+  width: 100%;
+  background: var(--fondo-header);
+}
+.close,.hamb {
+  cursor: pointer;
+  display: none;
+  transition: 0.4s;
+}
+header .container-head {
+  font-size: 30px;
+  color: var(--color-esp);
+  font-style: italic;
+}
+header nav {
+  min-width: 25%;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+header nav a {
+  color: white;
+  padding-left: 27px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+header nav a:hover {
+  color: var(--color-esp);
+  transition: .5s;
+}
+header .contacto a {
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 22px;
+}
+.fa-instagram {
+  color: rgb(187, 15, 38);
+}
+.fa-linkedin {
+  color: rgb(26, 26, 252);
+}
+.fa-envelope {
+  color: rgb(25, 146, 245);
+}
+main{
+  min-height: 80vh;
+  padding-top: 100px;
+}
+
+/*-------------footer-------------*/
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  height: 100%;
+  background: rgb(51, 51, 51);
+}
+footer p {
+  margin: 15px 0;
+  font-size: 20px;
+}
+footer .container-footer {
+  display: flex;
+  width: auto;
+  margin: 10px 0;
+  justify-content: space-between;
+}
+footer .container-footer a {
+  font-size: 28px;
+  margin: 0 10px;
+}
+/*-----------media---------*/
+@media (max-width: 768px) {
+  .hamb,
+  .close {
+    display: block;
+    color: white;
+    cursor: pointer;
+    font-size: 17px;
+  }
+  .close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+  nav a > span {
+    width: 6px;
+    height: 6px;
+    margin-left: 8px;
+    border-radius: 10px;
+    background: white;
+    display: inline-block;
+  }
+  .hamb {
+    position: relative;
+    right: 10px;
+  }
+  .contacto {
+    display: none;
+  }
+  header nav {
+    position: fixed;
+    display: block;
+    width: auto;
+    height: 100vh;
+    background: rgb(0, 0, 0);
+    top: 0;
+    right: 0;
+    text-align: right;
+    z-index: 300;
+    padding: 60px 20px 0 0;
+    transform: translateX(100%);
+    visibility: hidden;
+  }
+  nav.visible {
+    transform: translateX(0);
+    visibility: visible;
+    transition: 0.6s;
+  }
+  header nav a {
+    padding: 30px 0;
+    display: block;
+    text-transform: capitalize;
+  }
+}

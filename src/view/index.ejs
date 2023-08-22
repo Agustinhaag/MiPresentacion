@@ -1,37 +1,5 @@
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="/Css/portfolio.css" />
     <title>Portfolio</title>
-  </head>
-  <body class="dimensiones">
-    <header>
-      <div class="container-head">| AH |</div>
-      <span id="mostrar" class="hamb"><i class="fa-solid fa-bars"></i></span>
-      <nav id="menu">
-        <a href="#yo">Inicio<span class="enl"></span></a>
-        <a href="#info">Sobre mi<span class="enl"></span></a>
-        <a href="#servicio">Servicios<span class="enl"></span></a>
-        <a href="#proyect">Portafolio<span class="enl"></span></a>
-        <a href="#contact">Contacto<span class="enl"></span></a>
-        <span id="cerrar" class="close"><i class="fa-solid fa-x"></i></span>
-      </nav>
-      <div class="contacto">
-        <a href="https://www.instagram.com/agushaag22/"
-          ><i class="fa-brands fa-instagram"></i
-        ></a>
-        <a
-          href="https://www.linkedin.com/in/agustin-gerardo-haag-letterucci-8a6546225/"
-          ><i class="fa-brands fa-linkedin"></i
-        ></a>
-        <a href="mailto:agustin-haag@hotmail.com"
-          ><i class="fa-solid fa-envelope"></i
-        ></a>
-      </div>
-    </header>
     <main>
       <section id="yo" class="banner">
         <div class="container-banner">
@@ -42,7 +10,7 @@
         </div>
       </section>
       <section id="info" class="info">
-        <div class="perfil"><img src="file/perfil2.png" alt="" /></div>
+        <div class="perfil"><img src="/file/perfil2.png" alt="" /></div>
         <div class="container-info">
           <h3>Sobre mi</h3>
           <p>Hola, soy <label>Agustin Haag</label></p>
@@ -168,55 +136,90 @@
           <div class="indicadores"></div>
         </div>
         <div class="contenedor-principal">
-          <button id="flecha-izquierda" class="flecha-izquierda"><i class="fa-solid fa-chevron-left"></i></button>
+          <button id="flecha-izquierda" class="flecha-izquierda">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
           <div class="contenedor-carrusel">
-            <div id="container-proyect" class="container-proyect">
-            </div>
+            <div id="container-proyect" class="container-proyect"></div>
           </div>
-          <button id="flecha-derecha" class="flecha-derecha"><i class="fa-solid fa-chevron-right"></i></button>
+          <button id="flecha-derecha" class="flecha-derecha">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
         </div>
       </section>
       <section id="contact" class="form">
         <h2>Contacta conmigo</h2>
-        <form id="form"action="">
+        <form id="form" action="/" method="post">
           <div class="container-input">
-           <div class="container-small"> <input type="text" id="name" placeholder="Nombre completo *"/><small></small></div><div class="container-small"><input
-              type="email" id="email"
-              placeholder="Dirección de Email"
-            /><small></small></div>
+            <div class="container-small">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                 class="form-control <%= errors && errors.find(error => error.path === 'name') ? 'is-invalid' : '' %>"
+                value="<%=values.name%>"
+                placeholder="Nombre completo *"
+              />
+                <% if (typeof errors !== "undefined") { %>
+                                <% const nameError = errors.find(error => error.path === 'name'); %>
+                                <div class="textarea-error-msg">
+                                   <%= nameError ? nameError.msg : '' %>
+                                </div>
+                            <% } %>
+            </div>
+            <div class="container-small">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                 class="form-control <%= errors && errors.find(error => error.path === 'email') ? 'is-invalid' : '' %>"
+                 value="<%=values.email%>"
+                placeholder="Dirección de Email"
+              />
+                <% if (typeof errors !== "undefined") { %>
+                                <% const emailError = errors.find(error => error.path === 'email'); %>
+                                <div class="invalid-feedback">
+                                   <%= emailError ? emailError.msg : '' %>
+                                </div>
+                            <% } %>
+            </div>
           </div>
-          <div class="container-check"><input type="text" id="asunto" placeholder="Asunto"/><small></small></div>
-          <div class="container-check"><textarea
-            name=""
-            placeholder="Mensaje"
-            id="mensaje"
-            cols="30"
-            rows="10"
-          ></textarea><small></small></div>
-          <div class="container-btn-form"><button type="submit">Enviar</button></div>
+          <div class="container-check">
+            <input
+              type="text"
+              id="asunto"
+              name="asunto"
+               class="form-control <%= errors && errors.find(error => error.path === 'asunto') ? 'is-invalid' : '' %>"
+               value="<%=values.asunto%>"
+              placeholder="Asunto"
+            />
+              <% if (typeof errors !== "undefined") { %>
+                                <% const asuntoError = errors.find(error => error.path === 'asunto'); %>
+                                <div class="invalid-feedback">
+                                   <%= asuntoError ? asuntoError.msg : '' %>
+                                </div>
+                            <% } %>
+          </div>
+          <div class="container-check">
+            <textarea
+              name="message"
+              placeholder="Mensaje"
+              id="mensaje"
+               class="form-control <%= errors && errors.find(error => error.path === 'message') ? 'is-invalid' : '' %>"
+              cols="30"
+              rows="10"
+            ><%=values.message%></textarea>
+              <% if (typeof errors !== "undefined") { %>
+                                <% const messageError = errors.find(error => error.path === 'message'); %>
+                                <div class="textarea-error-msg">
+                                   <%= messageError ? messageError.msg : '' %>
+                                </div>
+                            <% } %>
+          </div>
+          <div class="container-btn-form">
+            <button type="submit">Enviar</button>
+          </div>
         </form>
       </section>
     </main>
-    <footer>
-      <p>&copy;All rights reserved - 2023</p>
-      <div class="container-footer">
-        <a href="https://www.instagram.com/agushaag22/"
-          ><i class="fa-brands fa-instagram"></i
-        ></a>
-        <a
-          href="https://www.linkedin.com/in/agustin-gerardo-haag-letterucci-8a6546225/"
-          ><i class="fa-brands fa-linkedin"></i
-        ></a>
-        <a href="mailto:agustin-haag@hotmail.com"
-          ><i class="fa-solid fa-envelope"></i
-        ></a>
-      </div>
-    </footer>
-    <script
-      src="https://kit.fontawesome.com/6fe6321916.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="proyects.js" type="module"></script>
-    <script src="index.js" type="module"></script>
-  </body>
-</html>
+  <script defer src="/Js/index.js" type="module"></script>
