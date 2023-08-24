@@ -17,7 +17,7 @@ app.set("layout", "./layout/public.ejs");
 const inicio = require("./src/route/inicioRoute.js");
 app.use("/", inicio);
 
-const port = process.env.port
+const port = 3006
 
 app.listen(port, () => {
     console.log(`http://localhost:${port}`);
