@@ -34,7 +34,7 @@ header .container-head {
   font-style: italic;
 }
 header nav {
-  min-width: 25%;
+  min-width: 105px;
   text-align: center;
   display: flex;
   justify-content: space-between;
@@ -124,14 +124,13 @@ footer .container-footer a {
   header nav {
     position: fixed;
     display: block;
-    width: auto;
     height: 100vh;
     background: rgb(0, 0, 0);
     top: 0;
     right: 0;
     text-align: right;
     z-index: 300;
-    padding: 60px 20px 0 0;
+    padding: 60px 20px 0 20px;
     transform: translateX(100%);
     visibility: hidden;
   }

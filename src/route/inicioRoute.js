@@ -5,7 +5,7 @@ const { body } = require("express-validator");
 
 const validar = [
   body("name").notEmpty().withMessage("El campo nombre no puede estar vacio"),
-  body("email").notEmpty().withMessage("el campo email no puede estar vacio"),
+  body("email").notEmpty().withMessage("El campo email no puede estar vacio"),
   body("asunto").notEmpty().withMessage("El campo asunto no puede estar vacio"),
   body("message")
     .notEmpty()

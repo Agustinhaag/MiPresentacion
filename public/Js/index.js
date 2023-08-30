@@ -1,3 +1,5 @@
+
+
 let menu = document.getElementById("menu");
 let mostrar = document.getElementById("mostrar");
 let cerrar = document.getElementById("cerrar");
@@ -15,6 +17,10 @@ enlaces.forEach((enlace) => {
     menu.classList.toggle("visible");
   });
 });
+
+
+
+
 
 const proyectos = [];
 
