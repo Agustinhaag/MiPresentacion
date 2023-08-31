@@ -19,9 +19,6 @@ enlaces.forEach((enlace) => {
 });
 
 
-
-
-
 const proyectos = [];
 
 const result = async () => {

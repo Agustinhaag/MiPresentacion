@@ -577,7 +577,7 @@ main .form form .container-btn-form button:hover {
     margin-bottom: 25px;
 }
 .container-sucess .container-description{
-    width: 37%;
+    width: 100%;
     margin-top: 30px;
     font-weight: 600;
     display: flex;
